@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('reminders', () => {
-    this.route('individual-reminder')
+    this.route('individual-reminder', {path: '/reminders/:id'})
   });
 });
 
