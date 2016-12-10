@@ -29,3 +29,13 @@ test('clicking on an individual item', function(assert) {
     assert.equal(Ember.$('.spec-reminder-item:first').text().trim(), Ember.$('.spec-reminder-title').text().trim());
   });
 });
+
+test('clicking on add new reminder', function(assert) {
+
+  visit('/');
+  click('.new-reminder');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/new');
+  });
+});
