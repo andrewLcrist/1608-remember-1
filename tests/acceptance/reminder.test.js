@@ -13,7 +13,7 @@ test('viewing the homepage', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/');
+    assert.equal(currentURL(), '/reminders');
     assert.equal(Ember.$('.spec-reminder-item').length, 5);
   });
 });
@@ -36,6 +36,6 @@ test('clicking on add new reminder', function(assert) {
   click('.new-reminder');
 
   andThen(function() {
-    assert.equal(currentURL(), '/new');
+    assert.equal(currentURL(), '/reminders/new');
   });
 });
