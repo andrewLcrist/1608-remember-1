@@ -1,4 +1,6 @@
 <h3 class="spec-reminder-title">{{model.title}}</h3>
-<article>{{model.notes}}</article>
+{{#if model.notes}}
+  <article class="spec-reminder-notes">"{{model.notes}}"</article>
+{{/if}}
 
 {{outlet}}
