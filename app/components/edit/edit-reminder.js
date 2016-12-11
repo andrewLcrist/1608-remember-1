@@ -1,20 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  store: Ember.inject.service(),
+  store: Ember.inject.service('-routing'),
 
   tagName: 'section',
-  classNames: ['new-reminder'],
+  classNames: ['edit-reminder'],
 
   title: '',
   date: '',
   notes: '',
 
   actions: {
-    createReminder() {
+    editReminder() {
       const reminder = this.getProperties('title', 'date', 'notes');
       reminder.date = new Date(reminder.date);
-      this.get('store').set('reminder', reminder).save().then(() => {
+      this.get('store').createRecord('reminder', reminder).save().then(() => {
         this.setProperties({title: '', date: '', notes: ''});
       });
     }

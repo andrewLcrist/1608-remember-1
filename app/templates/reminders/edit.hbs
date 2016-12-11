@@ -1,10 +1,9 @@
 <h3 class="spec-reminder-title">{{model.title}}</h3>
+
 {{#if model.notes}}
   <article class="spec-reminder-notes">"{{model.notes}}"</article>
 {{/if}}
-{{#if model.title}}
-  {{#link-to 'reminders.edit' }}
-    <button>Edit</button>
-  {{/link-to}}
-{{/if}}
+
+{{edit.edit-reminder reminder=model}}
+
 {{outlet}}

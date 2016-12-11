@@ -1,0 +1,17 @@
+<form class="edit-reminder--form" {{action 'editReminder' on="submit"}}>
+  <label>
+    Title
+    {{input class="spec-input-title" value=title}}
+  </label>
+  <label>
+    Date
+    {{input type="date" class="spec-input-date" value=date}}
+  </label>
+  <label>
+    Notes
+    {{input class="spec-input-notes" value=notes}}
+  </label>
+  <button class="edit-reminder--submit">Submit</button>
+</form>
+
+{{yield}}
