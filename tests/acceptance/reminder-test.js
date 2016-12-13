@@ -13,14 +13,14 @@ test('viewing the homepage', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/');
+    assert.equal(currentURL(), '/reminders');
   });
 });
 
 test('clicking on an individual item', function(assert) {
   server.createList('reminder', 5);
 
-  visit('/reminders');
+  visit('/');
   click('.spec-reminder-item:first');
 
   andThen(function() {
@@ -31,7 +31,7 @@ test('clicking on an individual item', function(assert) {
 
 test('clicking on add new reminder', function(assert) {
 
-  visit('/reminders');
+  visit('/');
   click('.new-reminder');
 
   andThen(function() {

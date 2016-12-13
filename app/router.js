@@ -13,7 +13,6 @@ Router.map(function() {
     this.route('edit', {path: '/edit/:reminder_id'});
     this.route('new');
   });
-  this.route('index', {path: '/'});
 });
 
 export default Router;

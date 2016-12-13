@@ -4,10 +4,13 @@
   Welcome to remEmber! In case you've already forgotten, you're here to track what you'll forget to do. Let's get started!
 </article>
 
-<br />
-
-{{#link-to "reminders"}}
-  <button class="dashboard-redirect">remEmber Dashboard</button>
+{{#link-to "reminders.new"}}
+  <button
+    class="new-reminder"
+    >Create New Reminder
+  </button>
 {{/link-to}}
+
+<br />
 
 {{outlet}}
